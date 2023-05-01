@@ -118,4 +118,14 @@ class class_openai
     }
 
 }
+
+$chat = new class_openai($apikey = "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");
+
+$prompt = "人生很痛苦，怎么办";
+
+$messages = array(array('role' => "system", 'content' =>"你是专业的心理师"),
+
+                  array('role' => "user", 'content' =>$prompt));
+
+$result = $chat->chat_completions_context($messages);
 ?>
